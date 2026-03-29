@@ -1,0 +1,15 @@
+export const PHOTOS = {
+  bdialogues: '/images/bdialogues.jpg',
+  bdiftar: '/images/bdiftar.jpg',
+  bureau1: '/images/bureau1.jpg',
+  bureau2: '/images/bureau2.jpg',
+  christmas: '/images/christmas.jpg',
+  erasmus: '/images/erasmus.jpg',
+  globepotter: '/images/globepotter.jpg',
+  logo: '/images/logo.jpg',
+  newyear: '/images/newyear.jpg',
+  village1: '/images/village1.jpg',
+  village2: '/images/village2.jpg',
+  village3: '/images/village3.jpg',
+  wei: '/images/wei.jpg',
+};
