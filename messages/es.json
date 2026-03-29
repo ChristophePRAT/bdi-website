@@ -20,7 +20,7 @@
     "bureauCaption1": "El Bureau 2024-2025",
     "bureauCaption2": "Los Responsables",
     "eventsTitle": "Nuestros eventos",
-    "eventsSub": "Una vuelta al mundo en 10 paradas 🗺️",
+    "eventsSub": "Una vuelta al mundo en 7 paradas 🗺️",
     "schoolTitle": "Telecom Paris",
     "schoolYear": "año de fundación",
     "schoolRank": "ª escuela digital en Francia",
@@ -61,17 +61,8 @@
     "event6Name": "New Year's Dinner",
     "event6Desc": "Recibimos el año nuevo juntos.",
     "event6Stamp": "AÑO NUEVO",
-    "event7Name": "International Boat",
-    "event7Desc": "Un crucero inolvidable por el Sena.",
-    "event7Stamp": "CRUCERO",
-    "event8Name": "Globe Potter",
-    "event8Desc": "Un festival cultural colorido.",
-    "event8Stamp": "FESTIVAL",
-    "event9Name": "Maxi Mardi",
-    "event9Desc": "¡Carnaval internacional!",
-    "event9Stamp": "CARNAVAL",
-    "event10Name": "WEI",
-    "event10Desc": "Fin de semana de integración.",
-    "event10Stamp": "WEI"
+    "event7Name": "Globe Potter",
+    "event7Desc": "Un festival cultural festivo y lleno de color.",
+    "event7Stamp": "FESTIVAL"
   }
 }

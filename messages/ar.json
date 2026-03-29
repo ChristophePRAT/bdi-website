@@ -20,7 +20,7 @@
     "bureauCaption1": "المكتب 2024-2025",
     "bureauCaption2": "المسؤولون",
     "eventsTitle": "فعالياتنا",
-    "eventsSub": "جولة حول العالم في ١٠ محطات 🗺️",
+    "eventsSub": "جولة حول العالم في ٧ محطات 🗺️",
     "schoolTitle": "Telecom Paris",
     "schoolYear": "سنة التأسيس",
     "schoolRank": " المدرسة الرقمية الأولى في فرنسا",
@@ -61,17 +61,8 @@
     "event6Name": "New Year's Dinner",
     "event6Desc": "نستقبل السنة الجديدة معًا.",
     "event6Stamp": "سنة جديدة",
-    "event7Name": "International Boat",
-    "event7Desc": "رحلة بحرية لا تُنسى على نهر السين.",
-    "event7Stamp": "رحلة",
-    "event8Name": "Globe Potter",
-    "event8Desc": "مهرجان ثقافي ملون.",
-    "event8Stamp": "مهرجان",
-    "event9Name": "Maxi Mardi",
-    "event9Desc": "كرنفال دولي!",
-    "event9Stamp": "كرنفال",
-    "event10Name": "WEI",
-    "event10Desc": "عطلة نهاية أسبوع الاندماج.",
-    "event10Stamp": "WEI"
+    "event7Name": "Globe Potter",
+    "event7Desc": "مهرجان ثقافي ملون واحتفالي.",
+    "event7Stamp": "مهرجان"
   }
 }

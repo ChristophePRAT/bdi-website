@@ -20,7 +20,7 @@
     "bureauCaption1": "Das Büro 2024-2025",
     "bureauCaption2": "Die Verantwortlichen",
     "eventsTitle": "Unsere Events",
-    "eventsSub": "Eine Weltreise in 10 Stationen 🗺️",
+    "eventsSub": "Eine Weltreise in 7 Stationen 🗺️",
     "schoolTitle": "Telecom Paris",
     "schoolYear": "Gründungsjahr",
     "schoolRank": ". digitale Hochschule Frankreichs",
@@ -61,17 +61,8 @@
     "event6Name": "New Year's Dinner",
     "event6Desc": "Wir begrüßen das neue Jahr zusammen.",
     "event6Stamp": "NEUJAHR",
-    "event7Name": "International Boat",
-    "event7Desc": "Eine unvergessliche Kreuzfahrt auf der Seine.",
-    "event7Stamp": "CRUISE",
-    "event8Name": "Globe Potter",
-    "event8Desc": "Ein farbenfrohes Kulturfestival.",
-    "event8Stamp": "FESTIVAL",
-    "event9Name": "Maxi Mardi",
-    "event9Desc": "Internationaler Karneval!",
-    "event9Stamp": "KARNEVAL",
-    "event10Name": "WEI",
-    "event10Desc": "Integrationswochenende.",
-    "event10Stamp": "WEI"
+    "event7Name": "Globe Potter",
+    "event7Desc": "Ein farbenfrohes und festliches Kulturfestival.",
+    "event7Stamp": "FESTIVAL"
   }
 }

@@ -20,7 +20,7 @@
     "bureauCaption1": "Le Bureau 2024-2025",
     "bureauCaption2": "Les Responsables",
     "eventsTitle": "Nos événements",
-    "eventsSub": "Un tour du monde en 10 étapes 🗺️",
+    "eventsSub": "Un tour du monde en 7 étapes 🗺️",
     "schoolTitle": "Telecom Paris",
     "schoolYear": "année de fondation",
     "schoolRank": "ère école du numérique en France",
@@ -61,17 +61,8 @@
     "event6Name": "New Year's Dinner",
     "event6Desc": "On accueille la nouvelle année ensemble.",
     "event6Stamp": "NYE",
-    "event7Name": "International Boat",
-    "event7Desc": "Une croisière inoubliable sur la Seine.",
-    "event7Stamp": "CRUISE",
-    "event8Name": "Globe Potter",
-    "event8Desc": "Un festival culturel coloré et festif.",
-    "event8Stamp": "FESTIVAL",
-    "event9Name": "Maxi Mardi",
-    "event9Desc": "Le mardi gras international — costumes et bonne humeur !",
-    "event9Stamp": "CARNAVAL",
-    "event10Name": "WEI",
-    "event10Desc": "Le Week-End d'Intégration pour bien commencer l'année.",
-    "event10Stamp": "WEI"
+    "event7Name": "Globe Potter",
+    "event7Desc": "Un festival culturel haut en couleurs et festif.",
+    "event7Stamp": "FESTIVAL"
   }
 }

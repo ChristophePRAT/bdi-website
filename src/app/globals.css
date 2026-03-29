@@ -36,7 +36,7 @@ body {
 
 /* Scrapbook effects */
 .wavy-underline {
-  @apply block w-[120px] h-[6px] mx-auto mt-1.5 rounded-[3px];
+  @apply block w-30 h-1.5 mx-auto mt-1.5 rounded-[3px];
   background: linear-gradient(90deg, #E63946, #FFB703);
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .polaroid .tape {
-  @apply absolute -top-2 left-1/2 -translate-x-1/2 w-[60px] h-5 bg-[rgba(255,183,3,0.5)] rounded-[2px];
+  @apply absolute -top-2 left-1/2 -translate-x-1/2 w-15 h-5 bg-[rgba(255,183,3,0.5)] rounded-xs;
   transform: translateX(-50%) rotate(var(--tape-rot, 2deg));
 }
 
@@ -64,16 +64,16 @@ body {
 }
 
 .stamp-card {
-  @apply flex-none w-[250px] bg-white border-3 border-dashed border-[var(--stamp-color,#E63946)] rounded-[20px] p-4 text-center relative transition-all duration-400 ease-[cubic-bezier(0.34,1.56,0.64,1)];
+  @apply flex-none w-60 bg-white border-3 border-dashed border-(--stamp-color,#E63946) rounded-[20px] p-4 text-center relative transition-all duration-400 ease-[cubic-bezier(0.34,1.56,0.64,1)];
 }
 
 .stamp-card::before {
   content: '';
-  @apply absolute -top-1.5 -right-1.5 w-9 h-9 rounded-full opacity-15 bg-[var(--stamp-color,#E63946)];
+  @apply absolute -top-1.5 -right-1.5 w-9 h-9 rounded-full opacity-15 bg-(--stamp-color,#E63946);
 }
 
 .event-card {
-  @apply flex-none w-[clamp(280px,38vw,400px)] rounded-[20px] overflow-hidden relative h-[450px] text-white flex flex-col justify-end transition-transform duration-400 cursor-pointer;
+  @apply flex-none w-[clamp(280px,38vw,400px)] rounded-[20px] overflow-hidden relative h-115 text-white flex flex-col justify-end transition-transform duration-400 cursor-pointer;
   perspective: 800px;
   transform-style: preserve-3d;
 }

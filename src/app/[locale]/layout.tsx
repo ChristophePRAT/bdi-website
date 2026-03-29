@@ -39,7 +39,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="h-full antialiased">
-      <body className={`${dmSans.variable} ${caveat.variable} ${instrumentSerif.variable} ${spaceMono.variable} ${notoSC.variable} ${notoArabic.variable} font-sans bg-[#FFF8F0] text-[#2B1810] min-h-full flex flex-col`}>
+      <body className={`${dmSans.variable} ${caveat.variable} ${instrumentSerif.variable} ${spaceMono.variable} ${notoSC.variable} ${notoArabic.variable} font-sans bg-bdi-cream text-bdi-dark min-h-full flex flex-col`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

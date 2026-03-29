@@ -1,4 +1,4 @@
-export const EVENT_PHOTOS = ['village3','bdiftar','bdialogues','erasmus','christmas','newyear',null,'globepotter',null,'wei'];
+export const EVENT_PHOTOS = ['village3','bdiftar','bdialogues','erasmus','christmas','newyear','globepotter'];
 export const EVENT_GRADIENTS = [
   'linear-gradient(135deg,#E63946,#FFB703)',
   'linear-gradient(135deg,#C9A84C,#2B1810)',
@@ -6,24 +6,18 @@ export const EVENT_GRADIENTS = [
   'linear-gradient(135deg,#7B2FF7,#FF6B6B)',
   'linear-gradient(135deg,#8B4513,#FFB703)',
   'linear-gradient(135deg,#FFB703,#E63946)',
-  'linear-gradient(135deg,#3D5AFE,#2EC4B6)',
-  'linear-gradient(135deg,#FF6B6B,#FFB703)',
-  'linear-gradient(135deg,#7B2FF7,#E63946)',
-  'linear-gradient(135deg,#E63946,#FFB703)'
+  'linear-gradient(135deg,#3D5AFE,#2EC4B6)'
 ];
-export const EVENT_EMOJIS = ['🌍','🌙','💬','🎶','🎄','🥂','🚢','🎨','🎭','🎒'];
+export const EVENT_EMOJIS = ['🌍','🌙','💬','🎶','🎄','🥂','🎨'];
 
 export const EVENT_LINKS = [
-  'https://www.instagram.com/p/DBonZ_NNCl6/', // Village International
-  'https://www.instagram.com/p/C5beZ_6NInZ/', // BDIftar
-  'https://www.instagram.com/p/C27StAnNWhS/', // BDialogues
-  'https://www.instagram.com/p/C2pVs_ttZIm/', // Erasmus Party
-  'https://www.instagram.com/p/C09_v9GNZWh/', // Christmas Dinner
-  'https://www.instagram.com/p/C1m__vzt_Im/', // New Year's Dinner
-  'https://www.instagram.com/p/Cx_Vs_ttZIm/', // International Boat (placeholder)
-  'https://www.instagram.com/p/Cyb_v9GNZWh/', // Globe Potter (placeholder)
-  'https://www.instagram.com/p/C3pVs_ttZIm/', // Maxi Mardi (placeholder)
-  'https://www.instagram.com/p/Cx_Vs_ttZIm/'  // WEI (placeholder)
+  'https://www.instagram.com/p/DKKa8qDvfNo/', // Village International
+  'https://www.instagram.com/p/DV_TGK2DMVH', // BDIftar
+  'https://www.instagram.com/reel/DP6IxmtjLXo/', // BDialogues
+  'https://www.instagram.com/p/DO6wMOxjhjY/', // Erasmus Party
+  'https://www.instagram.com/p/DSUP23eDS_v', // Christmas Dinner
+  'https://www.instagram.com/p/DTcp65MDBcC/', // New Year's Dinner
+  'https://www.instagram.com/p/DJtnkaxu8sj/', // Globe Potter
 ];
 
 export const PHOTO_WALL_KEYS = ['village1','village2','bdiftar','erasmus','christmas','globepotter','newyear'];

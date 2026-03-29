@@ -11,18 +11,18 @@ function EventCard({ name, desc, stamp, index }: { name: string, desc: string, s
   const link = EVENT_LINKS[index];
 
   return (
-    <a 
-      href={link} 
-      target="_blank" 
+    <a
+      href={link}
+      target="_blank"
       rel="noopener noreferrer"
-      id={cardId} 
+      id={cardId}
       className="event-card group block no-underline"
     >
       <EventCardClient cardId={cardId} innerId={innerId} />
       <div id={innerId} className="w-full h-full relative transition-transform duration-500 ease-out">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 select-none"
-          style={photo 
+          style={photo
             ? { backgroundImage: `url(${photo})` }
             : { background: EVENT_GRADIENTS[index], display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem' }
           }
@@ -45,11 +45,14 @@ export default async function Events() {
   const sectionId = 'events-section';
   const scrollId = 'events-scroll';
 
-  const events = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => ({
-    name: t(`Events.event${i}Name`),
-    desc: t(`Events.event${i}Desc`),
-    stamp: t(`Events.event${i}Stamp`)
-  }));
+  const events = EVENT_LINKS.map((_, index) => {
+    const i = index + 1;
+    return {
+      name: t(`Events.event${i}Name`),
+      desc: t(`Events.event${i}Desc`),
+      stamp: t(`Events.event${i}Stamp`)
+    };
+  });
 
   return (
     <section id={sectionId} className="py-20 px-5 text-center max-w-none">
@@ -59,8 +62,8 @@ export default async function Events() {
       </h2>
       <div className="wavy-underline" />
       <div className="font-caveat text-xl text-[#888] my-10">{t('Index.eventsSub')}</div>
-      
-      <div 
+
+      <div
         id={scrollId}
         className="overflow-x-auto flex gap-6 px-10 pb-10 snap-x snap-mandatory cursor-grab active:cursor-grabbing scrollbar-hide"
       >

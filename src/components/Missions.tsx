@@ -2,6 +2,9 @@ import { getTranslations } from 'next-intl/server';
 import { STAMP_COLORS } from '@/data/constants';
 import MissionsClient from './MissionsClient';
 
+
+const rotations = [2, -3, 1.5, -2.5, 3, -1]
+
 export default async function Missions() {
   const t = await getTranslations();
   const sectionId = 'missions-section';
@@ -14,26 +17,26 @@ export default async function Missions() {
   }));
 
   return (
-    <section id={sectionId} className="py-20 px-5 max-w-[1100px] mx-auto text-center">
+    <section id={sectionId} className="py-20 px-5 max-w-275 mx-auto text-center">
       <MissionsClient sectionId={sectionId} scrollId={scrollId} />
       <h2 className="font-instrument text-[clamp(2rem,5vw,3.5rem)] mb-2 relative inline-block w-full">
         {t('Index.missionsTitle')}
       </h2>
       <div className="wavy-underline" />
       <div className="font-caveat text-xl text-[#888] my-10">{t('Index.missionsSub')}</div>
-      
-      <div 
+
+      <div
         id={scrollId}
-        className="overflow-x-auto overflow-y-hidden flex gap-6 px-10 pb-10 snap-x snap-mandatory cursor-grab active:cursor-grabbing scrollbar-hide"
+        className="overflow-x-auto overflow-y-hidden flex gap-6 pb-10 pt-10 p-20 snap-x snap-mandatory cursor-grab active:cursor-grabbing scrollbar-hide"
       >
         {missions.map((m, i) => {
-          const rot = (Math.random() * 6 - 3).toFixed(1);
+          const rot = rotations[i % rotations.length];
           const color = STAMP_COLORS[i % STAMP_COLORS.length];
           return (
-            <div 
-              key={i} 
-              className="stamp-card snap-center hover:rotate-0 hover:scale-108"
-              style={{ 
+            <div
+              key={i}
+              className="stamp-card z-50 snap-center hover:rotate-0 hover:scale-108"
+              style={{
                 ['--stamp-color' as any]: color,
                 transform: `rotate(${rot}deg)`
               }}

@@ -20,7 +20,7 @@
     "bureauCaption1": "2024-2025执行团队",
     "bureauCaption2": "负责人",
     "eventsTitle": "我们的活动",
-    "eventsSub": "10站环球之旅 🗺️",
+    "eventsSub": "7站环球之旅 🗺️",
     "schoolTitle": "Telecom Paris",
     "schoolYear": "创立年份",
     "schoolRank": " 法国数字名校",
@@ -36,7 +36,7 @@
     "mission3Title": "语言交流",
     "mission3Desc": "学习、分享、连接。",
     "mission4Title": "凝聚活动",
-    "mission4Desc": "派对、晚宴、节日，创���美好回忆。",
+    "mission4Desc": "派对、晚宴、节日，创造美好回忆。",
     "mission5Title": "建立联系",
     "mission5Desc": "法国人或国际生，我们在一起。",
     "mission6Title": "放眼世界",
@@ -61,17 +61,8 @@
     "event6Name": "New Year's Dinner",
     "event6Desc": "一起迎接新年。",
     "event6Stamp": "新年",
-    "event7Name": "International Boat",
-    "event7Desc": "塞纳河上难忘的游船。",
-    "event7Stamp": "游船",
-    "event8Name": "Globe Potter",
-    "event8Desc": "色彩缤纷的文化节。",
-    "event8Stamp": "节日",
-    "event9Name": "Maxi Mardi",
-    "event9Desc": "国际狂欢节！",
-    "event9Stamp": "狂欢",
-    "event10Name": "WEI",
-    "event10Desc": "新学年融入周末。",
-    "event10Stamp": "WEI"
+    "event7Name": "Globe Potter",
+    "event7Desc": "一个色彩缤纷、充满节日气氛的文化节。",
+    "event7Stamp": "文化节"
   }
 }
