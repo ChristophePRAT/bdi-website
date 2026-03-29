@@ -32,7 +32,7 @@ export default async function About() {
       <div className="flex justify-center gap-10 flex-wrap">
         <Counter target={50} label={t('statNat')} id="stat-nat" />
         <Counter target={10} label={t('statEvents')} id="stat-events" />
-        <Counter target={7} label={t('statBureau')} id="stat-bureau" />
+        <Counter target={9} label={t('statBureau')} id="stat-bureau" />
         <Counter target={1} label={t('statFamily')} id="stat-family" />
       </div>
     </section>
