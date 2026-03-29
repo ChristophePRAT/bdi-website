@@ -1,31 +1,44 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+
+const EMOJIS = ['🌍', '🌎', '🌏', '✈️', '🗺️', '🎉', '🌐', '⭐', '🎊', '🌟', '💫', '🎈'];
+
+interface EmojiConfig {
+  emoji: string;
+  left: string;
+  fontSize: string;
+  duration: number;
+}
 
 function FloatingEmoji() {
-  const [emoji, setEmoji] = useState('🌍');
-  const [left, setLeft] = useState('50vw');
-  const [fontSize, setFontSize] = useState('1rem');
-  const [duration, setDuration] = useState(8000);
+  const [mounted, setMounted] = useState(false);
+  const [config, setConfig] = useState<EmojiConfig | null>(null);
 
   useEffect(() => {
-    const emojis = ['🌍', '🌎', '🌏', '✈️', '🗺️', '🎉', '🌐', '⭐', '🎊', '🌟', '💫', '🎈'];
-    setEmoji(emojis[Math.floor(Math.random() * emojis.length)]);
-    setLeft(Math.random() * 100 + 'vw');
-    setFontSize((Math.random() * 1.2 + 0.8) + 'rem');
-    setDuration(6000 + Math.random() * 8000);
+    requestAnimationFrame(() => {
+      setConfig({
+        emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
+        left: Math.random() * 100 + 'vw',
+        fontSize: (Math.random() * 1.2 + 0.8) + 'rem',
+        duration: 6000 + Math.random() * 8000
+      });
+      setMounted(true);
+    });
   }, []);
+
+  if (!mounted || !config) return null;
 
   return (
     <div 
       className="fixed pointer-events-none z-0 opacity-0 animate-[floatUp_var(--duration)_linear_infinite] select-none"
       style={{ 
-        left, 
-        fontSize,
-        ['--duration' as any]: `${duration}ms`
-      }}
+        left: config.left, 
+        fontSize: config.fontSize,
+        '--duration': `${config.duration}ms`
+      } as React.CSSProperties}
     >
-      {emoji}
+      {config.emoji}
     </div>
   );
 }
@@ -33,9 +46,13 @@ function FloatingEmoji() {
 export default function FooterClient() {
   const [emojis, setEmojis] = useState<number[]>([]);
 
+  const addEmoji = useCallback(() => {
+    setEmojis(prev => [...prev.slice(-10), Date.now()]);
+  }, []);
+
   useEffect(() => {
     // Add keyframe for floating animation if not exists
-    if (!document.getElementById('footer-animations')) {
+    if (typeof document !== 'undefined' && !document.getElementById('footer-animations')) {
       const style = document.createElement('style');
       style.id = 'footer-animations';
       style.innerHTML = `
@@ -59,12 +76,10 @@ export default function FooterClient() {
     }
 
     // Spawn emojis periodically
-    const interval = setInterval(() => {
-      setEmojis(prev => [...prev.slice(-10), Date.now()]);
-    }, 2500);
+    const interval = setInterval(addEmoji, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [addEmoji]);
 
   return (
     <>

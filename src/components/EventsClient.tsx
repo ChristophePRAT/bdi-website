@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -53,9 +53,13 @@ export function EventsScrollClient({ sectionId, scrollId }: { sectionId: string,
     const wrap = document.getElementById(scrollId);
     if (wrap) {
       let isDown = false, startX: number, scrollLeft: number;
-      wrap.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - wrap.offsetLeft; scrollLeft = wrap.scrollLeft; });
-      wrap.addEventListener('mouseleave', () => isDown = false);
-      wrap.addEventListener('mouseup', () => isDown = false);
+      wrap.addEventListener('mousedown', e => { 
+        isDown = true; 
+        startX = e.pageX - wrap.offsetLeft; 
+        scrollLeft = wrap.scrollLeft; 
+      });
+      wrap.addEventListener('mouseleave', () => { isDown = false; });
+      wrap.addEventListener('mouseup', () => { isDown = false; });
       wrap.addEventListener('mousemove', e => {
         if (!isDown) return;
         e.preventDefault();

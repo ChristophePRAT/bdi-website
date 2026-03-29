@@ -1,13 +1,14 @@
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import { PHOTOS } from '@/data/photos';
-import { EVENT_PHOTOS, EVENT_GRADIENTS, EVENT_EMOJIS, EVENT_LINKS } from '@/data/constants';
+import { EVENT_PHOTOS, EVENT_GRADIENTS, EVENT_EMOJIS, EVENT_LINKS, PhotoKey } from '@/data/constants';
 import { EventCardClient, EventsScrollClient } from './EventsClient';
 
 function EventCard({ name, desc, stamp, index }: { name: string, desc: string, stamp: string, index: number }) {
   const cardId = `event-card-${index}`;
   const innerId = `event-card-inner-${index}`;
   const photoKey = EVENT_PHOTOS[index];
-  const photo = photoKey ? (PHOTOS as any)[photoKey] : null;
+  const photo = photoKey ? PHOTOS[photoKey as PhotoKey] : null;
   const link = EVENT_LINKS[index];
 
   return (
@@ -21,18 +22,23 @@ function EventCard({ name, desc, stamp, index }: { name: string, desc: string, s
       <EventCardClient cardId={cardId} innerId={innerId} />
       <div id={innerId} className="w-full h-full relative transition-transform duration-500 ease-out">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 select-none"
-          style={photo
-            ? { backgroundImage: `url(${photo})` }
-            : { background: EVENT_GRADIENTS[index], display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem' }
-          }
+          className="absolute inset-0 transition-transform duration-500 group-hover:scale-110 select-none"
+          style={!photo ? { background: EVENT_GRADIENTS[index], display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem' } : {}}
         >
-          {!photo && EVENT_EMOJIS[index]}
+          {photo ? (
+            <Image
+              src={photo}
+              alt={name}
+              fill
+              sizes="(max-width: 768px) 38vw, (max-width: 1200px) 30vw, 400px"
+              className="object-cover"
+            />
+          ) : EVENT_EMOJIS[index]}
         </div>
         <div className="absolute inset-0 bg-linear-to-t from-[rgba(0,0,0,0.75)] via-transparent to-transparent opacity-100 group-hover:opacity-90" />
         <div className="event-stamp">{stamp}</div>
         <div className="relative z-10 p-6 text-left h-full flex flex-col justify-end">
-          <h3 className="font-instrument text-2xl mb-1.5">{name}</h3>
+          <h3 className="font-ranchers text-2xl mb-1.5">{name}</h3>
           <p className="text-[0.85rem] opacity-90 leading-relaxed">{desc}</p>
         </div>
       </div>
@@ -57,11 +63,11 @@ export default async function Events() {
   return (
     <section id={sectionId} className="py-20 px-5 text-center max-w-none">
       <EventsScrollClient sectionId={sectionId} scrollId={scrollId} />
-      <h2 className="font-instrument text-[clamp(2rem,5vw,3.5rem)] mb-2 relative inline-block w-full">
+      <h2 className="font-ranchers text-[clamp(2rem,5vw,3.5rem)] mb-2 relative inline-block w-full">
         {t('Index.eventsTitle')}
       </h2>
       <div className="wavy-underline" />
-      <div className="font-caveat text-xl text-[#888] my-10">{t('Index.eventsSub')}</div>
+      <div className="font-ranchers text-xl text-[#888] my-10">{t('Index.eventsSub')}</div>
 
       <div
         id={scrollId}
@@ -72,7 +78,7 @@ export default async function Events() {
         ))}
       </div>
 
-      <div className="scroll-hint flex items-center justify-center gap-2 font-caveat text-base text-[#888] mt-2">
+      <div className="scroll-hint flex items-center justify-center gap-2 font-ranchers text-base text-[#888] mt-2">
         <span>→</span> <span>{t('Index.scrollDrag')}</span> <span>→</span>
       </div>
     </section>

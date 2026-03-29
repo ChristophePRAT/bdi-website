@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
@@ -43,26 +43,23 @@ export function LocaleSwitcher() {
 }
 
 export function Logo({ src }: { src: string }) {
-  const [logoClicks, setLogoClicks] = useState(0);
-
   const onLogoClick = () => {
-    setLogoClicks(prev => {
-      const next = prev + 1;
-      if (next >= 5) {
-        document.body.classList.add('disco');
-        setTimeout(() => document.body.classList.remove('disco'), 3000);
-        return 0;
-      }
-      return next;
-    });
+    document.body.classList.add('disco');
+    setTimeout(() => document.body.classList.remove('disco'), 3000);
   };
 
   return (
-    <img 
-      src={src} 
-      alt="BDI Logo"
+    <div 
       onClick={onLogoClick}
-      className="fixed top-2.5 left-3 z-[9999] w-[50px] h-[50px] rounded-full object-cover cursor-pointer transition-transform duration-300 border-2 border-bdi-yellow hover:rotate-[20deg] hover:scale-110 rtl:left-auto rtl:right-3 md:top-[10px]"
-    />
+      className="fixed top-2.5 left-3 z-[9999] w-[50px] h-[50px] rounded-full overflow-hidden cursor-pointer transition-transform duration-300 border-2 border-bdi-yellow hover:rotate-[20deg] hover:scale-110 rtl:left-auto rtl:right-3 md:top-[10px]"
+    >
+      <Image 
+        src={src} 
+        alt="BDI Logo"
+        width={50}
+        height={50}
+        className="object-cover"
+      />
+    </div>
   );
 }

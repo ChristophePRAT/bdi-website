@@ -2,8 +2,8 @@
 
 @theme {
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-caveat: var(--font-caveat), cursive;
-  --font-instrument: var(--font-instrument-serif), serif;
+  /*--font-caveat: var(--font-caveat), cursive;*/
+  --font-ranchers: var(--font-family-ranchers), cursive;
   --font-mono: var(--font-space-mono), monospace;
   --font-zh: var(--font-noto-sc), var(--font-dm-sans), sans-serif;
   --font-ar: var(--font-noto-arabic), var(--font-dm-sans), sans-serif;
@@ -24,6 +24,10 @@ html {
 
 body {
   @apply font-sans;
+}
+
+h1, h2, h3, .font-ranchers {
+  font-family: var(--font-family-ranchers), cursive;
 }
 
 [lang="zh"] body {
@@ -60,7 +64,7 @@ body {
 }
 
 .polaroid .caption {
-  @apply absolute bottom-2 left-2.5 font-caveat text-base text-[#555];
+  @apply absolute bottom-2 left-2.5 font-ranchers text-base text-[#555];
 }
 
 .stamp-card {
@@ -83,12 +87,12 @@ body {
 }
 
 .nametag {
-  @apply w-[170px] rounded-[10px] overflow-hidden shadow-[2px_3px_10px_rgba(0,0,0,0.15)] transition-transform duration-300 cursor-default;
+  @apply transition-transform duration-300 cursor-default;
   perspective: 600px;
 }
 
 .welcome-marquee {
-  @apply overflow-hidden whitespace-nowrap mt-10 font-caveat text-[1.3rem] opacity-60;
+  @apply overflow-hidden whitespace-nowrap mt-10 font-ranchers text-[1.3rem] opacity-60;
 }
 
 .welcome-marquee-inner {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { fireConfetti } from '@/lib/utils';
@@ -17,12 +17,10 @@ const STICKERS = [
   { emoji: '🇪🇸', top: '80%', left: '20%' },
   { emoji: '🇮🇹', top: '25%', right: '25%' },
   { emoji: '🇬🇧', bottom: '20%', left: '30%' },
-  { emoji: '🇰🇷', top: '50%', left: '40%' },
+  { emoji: '🇰🇷', top: '30%', left: '40%' },
 ];
 
 export default function HeroClient({ titleId }: { titleId: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // Sticker parallax
     const stickers = gsap.utils.toArray<HTMLElement>('.sticker');
@@ -43,15 +41,15 @@ export default function HeroClient({ titleId }: { titleId: string }) {
     // Title animation
     const words = document.getElementById(titleId)?.querySelectorAll('.word');
     if (words) {
-      gsap.fromTo(words, 
+      gsap.fromTo(words,
         { y: 60, scale: 0.8 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          scale: 1, 
-          duration: 0.6, 
-          stagger: 0.1, 
-          ease: 'back.out(1.7)' 
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'back.out(1.7)'
         }
       );
     }
@@ -64,15 +62,14 @@ export default function HeroClient({ titleId }: { titleId: string }) {
   };
 
   return (
-    <div 
-      ref={containerRef}
+    <div
       onClick={onHeroClick}
       className="absolute inset-0 z-1"
     >
 
       {STICKERS.map((s, i) => (
-        <div 
-          key={i} 
+        <div
+          key={i}
           className="sticker absolute text-[clamp(1.5rem,4vw,3rem)] z-1 pointer-events-none will-change-transform select-none"
           style={{ top: s.top, left: s.left, right: s.right, bottom: s.bottom }}
         >
