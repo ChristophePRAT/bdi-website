@@ -10,7 +10,7 @@ export default async function Bureau() {
   const nametagsId = 'nametags-container';
 
   return (
-    <section id={sectionId} className="py-20 px-5 max-w-[1200px] mx-auto text-center">
+    <section id={sectionId} className="py-20 px-5 max-w-300 mx-auto text-center">
       <BureauClient sectionId={sectionId} nametagsId={nametagsId} />
       <h2 className="font-ranchers text-[clamp(2rem,5vw,3.5rem)] mb-2 relative inline-block w-full">
         {t('bureauTitle')}
@@ -19,7 +19,7 @@ export default async function Bureau() {
       <div className="font-ranchers text-xl text-[#888] my-10">{t('bureauSub')}</div>
 
       <div className="flex gap-7 justify-center flex-wrap mb-10">
-        <div className="bg-white p-2 pb-10 shadow-[2px_4px_15px_rgba(0,0,0,0.15)] max-w-[420px] transition-transform duration-400 hover:-rotate-1 hover:scale-103 bureau-polaroid">
+        <div className="bg-white p-2 pb-10 shadow-[2px_4px_15px_rgba(0,0,0,0.15)] max-w-100 transition-transform duration-400 hover:-rotate-1 hover:scale-103 bureau-polaroid">
           <div className="relative w-full aspect-4/3 overflow-hidden">
             <Image
               src={PHOTOS.bureau1}
@@ -31,7 +31,7 @@ export default async function Bureau() {
           </div>
           <div className="font-ranchers text-base text-[#555] mt-2 text-center">{t('bureauCaption1')}</div>
         </div>
-        <div className="bg-white p-2 pb-10 shadow-[2px_4px_15px_rgba(0,0,0,0.15)] max-w-[420px] transition-transform duration-400 hover:-rotate-1 hover:scale-103 bureau-polaroid">
+        <div className="bg-white p-2 pb-10 shadow-[2px_4px_15px_rgba(0,0,0,0.15)] max-w-100 transition-transform duration-400 hover:-rotate-1 hover:scale-103 bureau-polaroid">
           <div className="relative w-full aspect-4/3 overflow-hidden">
             <Image
               src={PHOTOS.bureau2}
@@ -59,7 +59,7 @@ export default async function Bureau() {
                     {m.role}
                 </div>
                 <div className="text-center py-8 md:py-10 px-4 flex flex-col items-center justify-center flex-1 min-h-40">
-                  <div className="font-ranchers text-4xl md:text-5xl text-bdi-dark leading-tight break-words w-full">
+                  <div className="font-ranchers text-4xl md:text-5xl text-bdi-dark leading-tight wrap-break-word w-full">
                     {m.name}
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default async function Bureau() {
                     {m.role}
                 </div>
                 <div className="text-center py-8 md:py-10 px-4 flex flex-col items-center justify-center flex-1 min-h-40">
-                  <div className="font-ranchers text-4xl md:text-5xl text-bdi-dark leading-tight break-words w-full">
+                  <div className="font-ranchers text-4xl md:text-5xl text-bdi-dark leading-tight wrap-break-word w-full">
                     {m.name}
                   </div>
                 </div>
