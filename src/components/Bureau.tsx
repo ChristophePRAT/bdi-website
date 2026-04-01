@@ -51,7 +51,7 @@ export default async function Bureau() {
           {BUREAU_MEMBERS.slice(0, 4).map((m: BureauMember, i) => (
             <div
               key={i}
-              className="relative w-full flex"
+              className="relative w-full flex nametag"
             >
               <div className="relative flex flex-col w-full rounded-xl overflow-hidden shadow-md border border-black/5 bg-white">
                 {/* Header */}
@@ -73,7 +73,7 @@ export default async function Bureau() {
           {BUREAU_MEMBERS.slice(4).map((m: BureauMember, i) => (
             <div
               key={i + 4}
-              className="relative w-full flex"
+              className="relative w-full flex nametag"
             >
               <div className="relative flex flex-col w-full rounded-xl overflow-hidden shadow-md border border-black/5 bg-white">
                 {/* Header */}

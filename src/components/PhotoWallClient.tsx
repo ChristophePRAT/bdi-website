@@ -9,8 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 export default function PhotoWallClient({ containerId }: { containerId: string }) {
   useEffect(() => {
     const container = document.getElementById(containerId);
-    const polaroids = container?.querySelectorAll('.polaroid');
-    if (polaroids) {
+    if (!container) return;
+    
+    const polaroids = container.querySelectorAll('.polaroid');
+    if (polaroids.length > 0) {
       gsap.from(polaroids, {
         y: 80,
         rotation: () => Math.random() * 20 - 10,
