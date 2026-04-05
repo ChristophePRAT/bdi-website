@@ -111,7 +111,11 @@ export const BUREAU_MEMBERS: BureauMember[] = [
         role: "Relations extérieures",
         photo: "/members/federico.jpeg",
     },
-    { name: "Younès", role: "Relations extérieures" },
+    {
+        name: "Younès",
+        role: "Relations extérieures",
+        photo: "/members/younes.jpeg",
+    },
 ];
 
 export const WELCOME_TEXTS =
