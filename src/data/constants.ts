@@ -99,7 +99,7 @@ export const BUREAU_MEMBERS: BureauMember[] = [
     },
     {
         name: "Fadi",
-        role: "Trésorière",
+        role: "Trésorier",
         photo: "/members/fadi.jpeg",
         email: "fadi.beirouty@telecom-paris.fr",
     },

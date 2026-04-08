@@ -26,12 +26,6 @@ export default async function Footer() {
                 >
                     📸 @bdi.telecomparis
                 </a>
-                {/*<a
-          href="mailto:bdi@telecom-paris.fr"
-          className="inline-flex items-center gap-2 bg-[rgba(255,248,240,0.1)] px-5 py-2.5 rounded-[30px] text-[0.95rem] transition-all duration-300 border border-[rgba(255,248,240,0.15)] hover:bg-[rgba(255,248,240,0.2)] hover:-translate-y-0.5"
-        >
-          📧 bdi@telecom-paris.fr
-        </a>*/}
             </div>
 
             <p className="font-mono text-[0.7rem] opacity-40 mt-7.5">
