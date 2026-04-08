@@ -1,13 +1,16 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { PHOTOS } from "@/data/photos";
 import { BUREAU_MEMBERS, BureauMember } from "@/data/constants";
 import BureauClient from "./BureauClient";
+import ObfuscatedLink from "./ObfuscatedLink";
 
 export default async function Bureau() {
     const t = await getTranslations("Index");
     const sectionId = "bureau-section";
     const nametagsId = "nametags-container";
+
+    // Helper to encode strings for obfuscation (Server-side)
+    const encode = (str: string) => Buffer.from(str).toString("base64");
 
     return (
         <section
@@ -50,22 +53,20 @@ export default async function Bureau() {
                                         {m.name}
                                     </div>
                                     {(m.email || m.phone) && (
-                                        <div className="flex flex-col gap-1 text-sm text-[#777]">
+                                        <div className="flex flex-col gap-1 text-xs text-[#777]">
                                             {m.email && (
-                                                <a
-                                                    href={`mailto:${m.email}`}
-                                                    className="hover:text-bdi-red transition-colors break-all"
-                                                >
-                                                    {m.email}
-                                                </a>
+                                                <ObfuscatedLink
+                                                    encoded={encode(m.email)}
+                                                    type="email"
+                                                    className="hover:text-bdi-red transition-colors break-all font-mono"
+                                                />
                                             )}
                                             {m.phone && (
-                                                <a
-                                                    href={`tel:${m.phone}`}
+                                                <ObfuscatedLink
+                                                    encoded={encode(m.phone)}
+                                                    type="tel"
                                                     className="hover:text-bdi-red transition-colors"
-                                                >
-                                                    {m.phone}
-                                                </a>
+                                                />
                                             )}
                                         </div>
                                     )}
@@ -104,22 +105,20 @@ export default async function Bureau() {
                                         {m.name}
                                     </div>
                                     {(m.email || m.phone) && (
-                                        <div className="flex flex-col gap-1 text-sm text-[#777]">
+                                        <div className="flex flex-col gap-1 text-xs text-[#777]">
                                             {m.email && (
-                                                <a
-                                                    href={`mailto:${m.email}`}
-                                                    className="hover:text-bdi-red transition-colors break-all"
-                                                >
-                                                    {m.email}
-                                                </a>
+                                                <ObfuscatedLink
+                                                    encoded={encode(m.email)}
+                                                    type="email"
+                                                    className="hover:text-bdi-red transition-colors break-all font-mono"
+                                                />
                                             )}
                                             {m.phone && (
-                                                <a
-                                                    href={`tel:${m.phone}`}
+                                                <ObfuscatedLink
+                                                    encoded={encode(m.phone)}
+                                                    type="tel"
                                                     className="hover:text-bdi-red transition-colors"
-                                                >
-                                                    {m.phone}
-                                                </a>
+                                                />
                                             )}
                                         </div>
                                     )}
