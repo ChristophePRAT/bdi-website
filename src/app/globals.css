@@ -16,11 +16,6 @@
     --color-bdi-dark: #2b1810;
 }
 
-/* Custom scrollbar removed */
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     @apply font-sans;
 }

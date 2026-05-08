@@ -6,7 +6,7 @@ import About from "@/components/About";
 import Missions from "@/components/Missions";
 import Bureau from "@/components/Bureau";
 import Events from "@/components/Events";
-import Recruiting from "@/components/Recruiting";
+import InternationalVillage from "@/components/InternationalVillage";
 import School from "@/components/School";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
@@ -26,7 +26,7 @@ export default async function IndexPage({
             <Hero />
             <Divider text="🌍 🇫🇷 🇧🇷 🇩🇪 🇪🇸 🇨🇳 🇸🇦 🇮🇹 🇯🇵 🇰🇷 🇲🇦 🇬🇧 🌍" />
 
-            <Recruiting />
+            <InternationalVillage />
 
             <PhotoWall />
 
