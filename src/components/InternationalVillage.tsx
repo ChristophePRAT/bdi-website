@@ -51,7 +51,7 @@ export default async function InternationalVillage() {
                         </p>
 
                         <a
-                            href="https://bde.telecom-paris.fr/shop"
+                            href="https://bde-telecom-paris.fr/shop"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block mt-5 font-ranchers text-lg bg-bdi-yellow text-bdi-dark px-7 py-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
