@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { CounterClient, AboutAnimation } from './AboutClient';
+import { BUREAU_MEMBERS } from '@/data/constants';
 
 function Counter({ target, label, id }: { target: number, label: string, id: string }) {
   return (
@@ -32,7 +33,7 @@ export default async function About() {
       <div className="flex justify-center gap-10 flex-wrap">
         <Counter target={50} label={t('statNat')} id="stat-nat" />
         <Counter target={10} label={t('statEvents')} id="stat-events" />
-        <Counter target={9} label={t('statBureau')} id="stat-bureau" />
+        <Counter target={BUREAU_MEMBERS.length} label={t('statBureau')} id="stat-bureau" />
         <Counter target={1} label={t('statFamily')} id="stat-family" />
       </div>
     </section>

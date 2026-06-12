@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import PhotoWall from "@/components/PhotoWall";
@@ -6,7 +6,6 @@ import About from "@/components/About";
 import Missions from "@/components/Missions";
 import Bureau from "@/components/Bureau";
 import Events from "@/components/Events";
-import InternationalVillage from "@/components/InternationalVillage";
 import School from "@/components/School";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
@@ -18,6 +17,7 @@ export default async function IndexPage({
 }) {
     const { locale } = await params;
     setRequestLocale(locale);
+    const t = await getTranslations("Index");
 
     return (
         <main>
@@ -26,7 +26,11 @@ export default async function IndexPage({
             <Hero />
             <Divider text="🌍 🇫🇷 🇧🇷 🇩🇪 🇪🇸 🇨🇳 🇸🇦 🇮🇹 🇯🇵 🇰🇷 🇲🇦 🇬🇧 🌍" />
 
-            <InternationalVillage />
+            <div className="py-6 px-5 text-center">
+                <p className="font-ranchers text-xl text-[#888]">
+                    {t("villageSuccess")}
+                </p>
+            </div>
 
             <PhotoWall />
 

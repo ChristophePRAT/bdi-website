@@ -139,6 +139,30 @@ export const BUREAU_MEMBERS: BureauMember[] = [
         photo: "/members/younes.jpeg",
         email: "younes.hallai@telecom-paris.fr",
     },
+    {
+        name: "Elouan",
+        role: "Communication",
+        photo: "/members/elouan.png",
+        email: "elouan.lahougue@telecom-paris.fr",
+    },
+    {
+        name: "Mohamed Aziz",
+        role: "Events",
+        photo: "/members/aziz.jpg",
+        email: "mohamed.chebil@telecom-paris.fr",
+    },
+    {
+        name: "Alicia",
+        role: "Communication",
+        photo: "/members/alicia.jpg",
+        email: "alicia.chouteau@telecom-paris.fr",
+    },
+    {
+        name: "Ala",
+        role: "Events & Design",
+        photo: "/members/alaa.jpg",
+        email: "ala.ellefi@telecom-paris.fr",
+    },
 ];
 
 export const WELCOME_TEXTS =
