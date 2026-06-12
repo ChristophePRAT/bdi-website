@@ -141,7 +141,7 @@ export const BUREAU_MEMBERS: BureauMember[] = [
     },
     {
         name: "Elouan",
-        role: "Communication",
+        role: "Design",
         photo: "/members/elouan.png",
         email: "elouan.lahougue@telecom-paris.fr",
     },
