@@ -76,9 +76,9 @@ export default async function Bureau() {
                     ))}
                 </div>
 
-                {/* Second row: 5 members */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
-                    {BUREAU_MEMBERS.slice(4, 9).map((m: BureauMember, i) => (
+                {/* Second row: 6 members */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 md:gap-6">
+                    {BUREAU_MEMBERS.slice(4, 10).map((m: BureauMember, i) => (
                         <div
                             key={i + 4}
                             className="relative w-full flex nametag"
@@ -128,11 +128,11 @@ export default async function Bureau() {
                     ))}
                 </div>
 
-                {/* Third row: 4 new members */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-                    {BUREAU_MEMBERS.slice(9).map((m: BureauMember, i) => (
+                {/* Third row: 5 new members */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
+                    {BUREAU_MEMBERS.slice(10).map((m: BureauMember, i) => (
                         <div
-                            key={i + 9}
+                            key={i + 10}
                             className="relative w-full flex nametag"
                         >
                             <div className="relative flex flex-col w-full rounded-xl overflow-hidden shadow-md border border-black/5 bg-white">

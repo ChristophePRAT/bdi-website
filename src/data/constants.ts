@@ -140,6 +140,12 @@ export const BUREAU_MEMBERS: BureauMember[] = [
         email: "younes.hallai@telecom-paris.fr",
     },
     {
+        name: "Amayas",
+        role: "Design",
+        photo: "/members/amayas.png",
+        email: "amayas.haddag@telecom-paris.fr",
+    },
+    {
         name: "Elouan",
         role: "Design",
         photo: "/members/elouan.png",
@@ -162,6 +168,12 @@ export const BUREAU_MEMBERS: BureauMember[] = [
         role: "Events & Design",
         photo: "/members/alaa.jpg",
         email: "ala.ellefi@telecom-paris.fr",
+    },
+    {
+        name: "Joseph",
+        role: "Relations publiques",
+        photo: "/members/joseph.jpeg",
+        email: "joseph.cadiou@telecom-paris.fr",
     },
 ];
 
